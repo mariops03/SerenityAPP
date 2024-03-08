@@ -12,11 +12,21 @@ import piniaPluginPersistedState from 'pinia-plugin-persistedstate';
 const vuetify = createVuetify({
   components,
   directives,
+  theme: {
+    defaultTheme: 'myTheme',
+    themes: {
+      myTheme: {
+        primary: '#6DCFF6', // color 1
+        secondary: '#A8D5BA', // color 2
+        accent: '#FFFFFF', // color 3
+        background: '#EAEAEA' // color 4 for background
+      }
+    }
+  }
 });
 
 const pinia = createPinia();
 
 pinia.use(piniaPluginPersistedState);
-
 
 createApp(App).use(router).use(vuetify).use(pinia).mount('#app');
