@@ -7,7 +7,10 @@ import Use from "./components/Use.vue";
 <template>
   <v-app
     style="
-      background-image: url('./fondo2.svg');
+      display: grid;
+      min-height: 100vh; /* Hace que el grid cubra toda la altura del viewport */
+      grid-template-rows: auto 1fr auto; /* Crea tres filas: auto, 1fr (crece para llenar el espacio restante) y auto */
+      background-image: url('./fondo3.svg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -15,13 +18,13 @@ import Use from "./components/Use.vue";
   >
     <v-main>
       <v-row
-        style="margin-top: 20px; padding: 20px; width: 50%; margin-left: 25%"
+        style="margin-top: 20px; padding: 20px;"
         align="center" justify="center"
       >
         <Navbar />
       </v-row>
       <Use />
-      <Footer />
     </v-main>
+    <Footer />
   </v-app>
 </template>

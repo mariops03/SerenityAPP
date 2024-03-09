@@ -31,13 +31,15 @@ import { useDisplay } from "vuetify";
 
 <style>
 .btn-transparent {
-  border-radius: 15px;
-  border: 1px solid rgba(224, 224, 224, 0.6);
-  margin: 10px;
-  padding: 10px;
-  width: 100%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 20px;
+    background-image: linear-gradient(to right, rgba(138, 101, 170, 0.5), rgba(34, 88, 142, 0.5), rgba(101, 171, 170, 0.5));
+    border-radius: 15px;
+    border: 1px solid rgba(224, 224, 224, 0.6);
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .primary-button {
@@ -46,7 +48,4 @@ import { useDisplay } from "vuetify";
   font-size: 40px;
 }
 
-.btn-transparent {
-background-color: #A8D5BA;
-}
 </style>

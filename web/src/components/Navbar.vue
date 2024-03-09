@@ -1,14 +1,10 @@
 <template>
-  <v-row>
-    <v-col cols="12" md="12" class="d-flex align-center justify-center">
-        <div class="navbar" :class="{ glass: !mobile, 'glass-mobile': mobile }">
+  <v-row justify="center" align="center">
+    <v-col cols="12" md="8" lg="6" xl="2" class="d-flex align-center justify-center">
+        <div class="navbar">
           <div class="navbar-brand">
-            <img
-              src="../../public/logo1.png"
-              style="width: 10%"
-              class="mt-2"
-              alt="SerenityAPP"
-            />
+            <img src="../../public/logo1.png" style="width: 45px; max-width: 15vw;" class="mt-2 mr-2" alt="SerenityAPP" />
+
           </div>
           <div class="navbar-menu">
             <a class="navbar-item" @click="navigateTo('inicio')">Inicio</a>
@@ -73,7 +69,8 @@ export default {
   padding: 10px;
   text-decoration: none;
   color: #212121;
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: medium;
 }
 
 .navbar-item:hover {
