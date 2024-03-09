@@ -13,11 +13,10 @@ import Use from "./components/Use.vue";
       background-position: center;
     "
   >
-    <v-main style="align-items: center; justify-content: center">
+    <v-main>
       <v-row
-        justify="center"
-        align="center"
         style="margin-top: 20px; padding: 20px; width: 50%; margin-left: 25%"
+        align="center" justify="center"
       >
         <Navbar />
       </v-row>
