@@ -14,7 +14,6 @@
 
 <style scoped>
 .footer {
-
   padding: 20px 0;
   text-align: center;
 }
@@ -29,22 +28,22 @@
 .social-icons {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alinea los íconos de redes sociales a la izquierda */
-  margin-bottom: 5px; /* Ajusta el espacio superior */
+  justify-content: flex-start;
+  margin-bottom: 5px;
 }
 
 .social-icon {
   font-size: 24px;
   color: #333;
-  margin-right: 10px; /* Ajusta el espacio entre los íconos */
+  margin-right: 10px;
 }
 
 .social-icon:last-child {
-  margin-right: 0; /* Elimina el margen derecho del último ícono */
+  margin-right: 0;
 }
 
 .social-icon:hover {
-  color: #007bff; /* Cambia el color al pasar el ratón sobre el icono */
+  color: #007bff;
 }
 
 /* Estilo para los íconos de Material Design Icons */
