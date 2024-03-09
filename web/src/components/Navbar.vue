@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center">
+  <v-row justify="center" align="center" class="mt-10">
     <v-col cols="12" md="8" lg="6" xl="2" class="d-flex align-center justify-center">
         <div class="navbar">
           <div class="navbar-brand">
