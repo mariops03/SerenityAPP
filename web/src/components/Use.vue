@@ -3,24 +3,27 @@
     <v-row style="height: 40vh" align="center" justify="center">
       <v-col cols="10" md="8" lg="5">
         <button class="btn-transparent primary-button">
-          REALIZAR ANÁLISIS
+            <!-- <img src="../../public/logo1.png" alt="Logo" style="width: 120px; max-width: 15vw;" class="mt-1">
+            <br> -->
+            REALIZAR ANÁLISIS
         </button>
       </v-col>
     </v-row>
 
     <v-row align="center" justify="center">
-      <v-col cols="12" md="6" lg="4" xl="2">
+      <v-col cols="11" md="6" lg="4" xl="2">
         <button class="secondary-button btn-transparent">
           Historial de Análisis
         </button>
       </v-col>
-      <v-col cols="12" md="6" lg="4" xl="2">
+      <v-col cols="11" md="6" lg="4" xl="2">
         <button class="secondary-button btn-transparent">
           Historial de Servicios
         </button>
       </v-col>
     </v-row>
   </v-container>
+  
 </template>
 
 <script>
@@ -37,7 +40,6 @@ import { useDisplay } from "vuetify";
 .btn-transparent {
   border-radius: 15px;
   border: 1px solid rgba(224, 224, 224, 0.6);
-  margin: 10px;
   padding: 10px;
   width: 100%;
   
@@ -58,6 +60,7 @@ import { useDisplay } from "vuetify";
   backdrop-filter: blur(5px);
   height: max-content;
   color: #313131;
+  border-radius: 30px;
 }
 
 .secondary-button {
