@@ -1,34 +1,39 @@
+User
 <template>
-  <v-container>
-    <v-row style="height: 40vh" align="center" justify="center">
-      <v-col cols="10" md="8" lg="5">
-        <button class="btn-transparent primary-button">
-            <!-- <img src="../../public/logo1.png" alt="Logo" style="width: 120px; max-width: 15vw;" class="mt-1">
-            <br> -->
+    <v-container>
+      <v-row style="height: 40vh" align="center" justify="center">
+        <v-col cols="10" md="8" lg="5">
+          <button class="btn-transparent primary-button" @click="redirectToAnalisis">
             REALIZAR ANÁLISIS
-        </button>
-      </v-col>
-    </v-row>
-
-    <v-row align="center" justify="center">
-      <v-col cols="11" md="6" lg="4" xl="2">
-        <button class="secondary-button btn-transparent">
-          Historial de Análisis
-        </button>
-      </v-col>
-      <v-col cols="11" md="6" lg="4" xl="2">
-        <button class="secondary-button btn-transparent">
-          Historial de Servicios
-        </button>
-      </v-col>
-    </v-row>
-  </v-container>
+          </button>
+        </v-col>
+      </v-row>
   
-</template>
-
-<script>
-import { useDisplay } from "vuetify";
-</script>
+      <v-row align="center" justify="center">
+        <v-col cols="11" md="6" lg="4" xl="2">
+          <button class="secondary-button btn-transparent">
+            Historial de Análisis
+          </button>
+        </v-col>
+        <v-col cols="11" md="6" lg="4" xl="2">
+          <button class="secondary-button btn-transparent">
+            Historial de Servicios
+          </button>
+        </v-col>
+      </v-row>
+    </v-container>
+  </template>
+  
+  <script>
+  export default {
+    methods: {
+      redirectToAnalisis() {
+        this.$router.push('/analisis');
+      }
+    }
+  };
+  </script>
+  
 
 <style>
 
