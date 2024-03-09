@@ -1,46 +1,46 @@
-<template>
-    <v-row>
-        <v-col cols="12" md="4">
-            <v-card style="border: 1px solid #e0e0e0; border-radius: 15px; margin: 10px; padding: 10px;">
-                <v-card-title>¿Que crees que te sucede?</v-card-title>
-                <v-card-text>
-                    <p>
-                        Aqui deberias de poder introducir
-                    </p>
-                </v-card-text>
-            </v-card>
+<template>  
+    <v-container>
+      <v-row style="height: 30vh;">
+        <v-col cols="12" class="mt-15" style="align-items: center;" >
+          <button class="btn btn-primary btn-transparent primary-button">REALIZAR ANÁLISIS</button>
         </v-col>
-        <v-col cols="12" md="4">
-            <v-img
-                src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-                aspect-ratio="1"
-                contain
-                ></v-img>
-
+      </v-row>
+  
+      <v-row>
+        <v-col cols="10" md="6">
+          <button class="btn btn-primary btn-transparent">Historial de Análisis</button>
         </v-col>
-        <v-col cols="12" md="4">
-            <v-card style="border: 1px solid #e0e0e0; border-radius: 15px; margin: 10px; padding: 10px;">
-                <v-card-title>Last Analisis</v-card-title>
-                <v-card-text>
-                    <p>
-                        LIsta de Antiguos Analisis
-                    </p>
-                </v-card-text>
-            </v-card>
+  
+        <v-col cols="12" md="6">
+          <button class="btn btn-primary btn-transparent">Historial de Servicios</button>
         </v-col>
-    </v-row>
-    <v-row>
-        <v-col cols="12" md="4"></v-col>
-        <v-col cols="12" md="4">
-            <button class="btn btn-primary" style="border-radius: 15px; border: 1px solid #e0e0e0; margin: 10px; padding: 10px; width: 100%;">Iniciar Analisis</button>
-        </v-col>
-        <v-col cols="12" md="4"></v-col>
-
-            
-    </v-row>
-
-</template>
-
-<script>
-import { useDisplay } from "vuetify";
-</script>
+      </v-row>
+    </v-container>
+  </template>
+  
+  <script>
+  import { useDisplay } from "vuetify";
+  </script>
+  
+  <style>
+  .btn-transparent {
+    border-radius: 15px;
+    border: 1px solid rgba(224, 224, 224, 0.5);
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }
+  
+  .primary-button {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .btn-transparent {
+    background-color: rgba(255, 255, 255, 0.7); /* Puedes ajustar el valor alpha (el último valor) para cambiar la transparencia */
+  }
+  </style>
+  
