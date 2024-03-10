@@ -5,7 +5,7 @@
       <div class="contact-info">
         <div class="contact-item">
           <span class="mdi mdi-email"></span>
-          <p>Email: info@serenityapp.com</p>
+          <p>Email: serenitydevteam@gmail.com</p>
         </div>
         <div class="contact-item">
           <span class="mdi mdi-phone"></span>
@@ -13,7 +13,7 @@
         </div>
         <div class="contact-item">
           <span class="mdi mdi-map-marker"></span>
-          <p>Dirección: 123 Calle Principal, Ciudad, País</p>
+          <p>Dirección: Pl. Caídos, s/n, 37008 Salamanca, España</p>
         </div>
       </div>
       <div class="contact-form">
