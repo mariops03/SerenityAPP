@@ -3,9 +3,9 @@
     <div class="footer-content">
       <strong>Síguenos en nuestras redes sociales:</strong>
       <div class="social-icons">
-        <a href="#" class="social-icon"><span class="mdi mdi-facebook"></span></a>
-        <a href="#" class="social-icon"><span class="mdi mdi-twitter"></span></a>
-        <a href="#" class="social-icon"><span class="mdi mdi-instagram"></span></a>
+        <a href="https://www.facebook.com/profile.php?id=61557221400129" class="social-icon" target="_blank"><span class="mdi mdi-facebook"></span></a>
+        <a href="https://twitter.com/AppSerenity" class="social-icon" target="_blank"><span class="mdi mdi-twitter"></span></a>
+        <a href="https://www.instagram.com/serenity_app_/" class="social-icon" target="_blank"><span class="mdi mdi-instagram"></span></a>
       </div>
       <p>&copy; {{ new Date().getFullYear() }} Serenity APP. Todos los derechos reservados.</p>
     </div>

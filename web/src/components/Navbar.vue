@@ -16,20 +16,30 @@
 </template>
 
 <script>
-import { ref } from "vue";
-import { useDisplay } from "vuetify";
+import { useRouter } from 'vue-router';
 
 export default {
   setup() {
-    const mobile = ref(false);
-    const { mobile: isMobile } = useDisplay();
-    mobile.value = isMobile;
+    const router = useRouter();
 
     const navigateTo = (page) => {
       console.log("Navigating to", page);
+      switch (page) {
+        case 'inicio':
+          router.push({ name: 'Home' });
+          break;
+        case 'acerca':
+          router.push({ name: 'Acerca' });
+          break;
+        case 'contacto':
+          router.push({ name: 'Contact' });
+          break;
+        default:
+          break;
+      }
     };
 
-    return { mobile, navigateTo };
+    return { navigateTo };
   },
 };
 </script>
