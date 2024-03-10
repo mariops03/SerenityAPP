@@ -40,7 +40,7 @@ export default {
           router.push({ name: "Acerca" });
           break;
         case "contacto":
-          router.push({ name: "Contact" });
+          router.push({ name: "Contacto" });
           break;
         default:
           break;

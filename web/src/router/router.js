@@ -4,6 +4,7 @@ import Signin from '../views/Signin.vue'
 import Analisis from '../views/Analisis.vue'
 import Home from '../views/Home.vue'
 import Acerca from '../views/Acerca.vue'
+import Contacto from '../views/Contacto.vue'
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     name: 'Acerca',
     path: '/acerca',
     component: Acerca
+  },
+  {
+    name: 'Contacto',
+    path: '/contacto',
+    component: Contacto
   }
 
 ]
