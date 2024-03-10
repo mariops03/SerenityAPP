@@ -2,7 +2,7 @@ User
 <template>
   <v-container>
     <v-row style="height: 40vh" align="center" justify="center">
-      <v-col cols="10" md="8" lg="5">
+      <v-col cols="11" md="12" lg="8" xl="4">
         <button
           v-if="boton"
           class="btn-transparent primary-button"
@@ -68,8 +68,6 @@ export default {
   border: 1px solid rgba(224, 224, 224, 0.6);
   padding: 10px;
   width: 100%;
-
-  font-size: 20px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -82,7 +80,7 @@ export default {
   font-family: "KatahdinRound", fantasy; /* Aquí agregamos la fuente instalada */
   padding: 20px;
   font-weight: normal;
-  font-size: 45px;
+  font-size: 40px;
   backdrop-filter: blur(5px);
   height: max-content;
   color: #313131;

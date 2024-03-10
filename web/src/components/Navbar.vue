@@ -1,22 +1,30 @@
 <template>
-  <v-row justify="center" align="center" class="mt-8">
-    <v-col cols="12" md="8" lg="6" xl="2" class="d-flex align-center justify-center">
+  <v-container>
+    <v-row justify="center" align="center" class="mt-4">
+      <v-col cols="11" md="12" lg="8" xl="4" class="align-center justify-center">
         <div class="navbar">
           <div class="navbar-brand">
-            <img src="../../public/logo1.png" style="width: 45px; max-width: 15vw;" class="mt-2 mr-2" alt="SerenityAPP" />
+            <img
+              src="../../public/logo1.png"
+              style="width: 45px; max-width: 15vw"
+              class="mt-2 mr-2"
+              alt="SerenityAPP"
+            />
           </div>
-          <div class="navbar-menu">
+          
             <a class="navbar-item" @click="navigateTo('inicio')">Inicio</a>
+            <div class="navbar-menu ml-auto">
             <a class="navbar-item" @click="navigateTo('acerca')">Acerca</a>
             <a class="navbar-item" @click="navigateTo('contacto')">Contacto</a>
           </div>
         </div>
-    </v-col>
-  </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 export default {
   setup() {
@@ -25,14 +33,14 @@ export default {
     const navigateTo = (page) => {
       console.log("Navigating to", page);
       switch (page) {
-        case 'inicio':
-          router.push({ name: 'Home' });
+        case "inicio":
+          router.push({ name: "Home" });
           break;
-        case 'acerca':
-          router.push({ name: 'Acerca' });
+        case "acerca":
+          router.push({ name: "Acerca" });
           break;
-        case 'contacto':
-          router.push({ name: 'Contact' });
+        case "contacto":
+          router.push({ name: "Contact" });
           break;
         default:
           break;

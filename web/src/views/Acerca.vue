@@ -16,18 +16,21 @@
     </div>
   </template>
   
-  
-  <script>
-  export default {
-    name: 'AboutUs'
-  }
-  </script>
-  
   <style scoped>
-.about-us {
+  .about-us {
     width: 70vw;
     margin: 0 auto;
     padding: 20px;
-}
+  }
+  .about-us h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
   </style>
   
