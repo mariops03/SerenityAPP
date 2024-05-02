@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-row justify="center">
-      <v-col cols="12" sm="6" md="4">
-        <v-card>
+    <v-row justify="center" class="mt-16">
+      <v-col cols="12" sm="8" md="6" lg="4">
+        <v-card class="card">
           <v-card-title class="text-h5">Iniciar Sesión</v-card-title>
           <v-card-text>
             <v-alert
@@ -37,6 +37,15 @@
             </v-form>
           </v-card-text>
         </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8" md="5">
+        <div class="text-center text-subtitle-2">
+          <router-link to="/signup" class="font-weight-bold text-black"
+            >¿No tienes cuenta? ¡Haz click para crear una!</router-link
+          >
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -81,3 +90,19 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  align-items: center;
+  padding: 10px 20px;
+}
+</style>
