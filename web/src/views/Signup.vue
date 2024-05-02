@@ -3,18 +3,9 @@
     <v-row justify="center">
       <v-col cols="12" sm="6" md="4">
         <v-card>
-          <v-card-title class="text-h5">Iniciar Sesión</v-card-title>
+          <v-card-title class="text-h5">Registro</v-card-title>
           <v-card-text>
-            <v-alert
-              v-if="errorMessage"
-              type="error"
-              dense
-              dismissible
-              @input="errorMessage = ''"
-            >
-              {{ errorMessage }}
-            </v-alert>
-            <v-form @submit.prevent="login">
+            <v-form @submit.prevent="signUp">
               <v-text-field
                 label="Correo electrónico"
                 v-model="email"
@@ -33,7 +24,7 @@
                 :rules="passwordRules"
                 required
               ></v-text-field>
-              <v-btn color="primary" type="submit" block>Iniciar Sesión</v-btn>
+              <v-btn color="primary" type="submit" block>Registrarse</v-btn>
             </v-form>
           </v-card-text>
         </v-card>
@@ -44,40 +35,38 @@
 
 <script>
 import axios from 'axios';
-
 export default {
   data() {
     return {
       email: '',
       password: '',
       showPassword: false,
-      errorMessage: '',
       emailRules: [
         v => !!v || 'El correo electrónico es requerido',
         v => /.+@.+\..+/.test(v) || 'El correo electrónico debe ser válido',
       ],
       passwordRules: [
         v => !!v || 'La contraseña es requerida',
+        v => v.length >= 6 || 'La contraseña debe tener al menos 6 caracteres',
       ],
     };
   },
   methods: {
-    login() {
+    signUp() {
       const user = {
         email: this.email,
         password: this.password
       };
       
-      axios.post('http://localhost:3000/api/users/login', user, { withCredentials: true })
+      axios.post('http://localhost:3000/api/users', user, { withCredentials: true })
         .then(response => {
-          console.log('Inicio de sesión exitoso:', response.data);
+          console.log('Usuario registrado con éxito:', response.data);
           this.$router.push({ name: 'Home' });
         })
         .catch(error => {
-          console.error('Error al iniciar sesión:', error.response);
-          this.errorMessage = error.response.data.message || 'Error al iniciar sesión';
+          console.error('Error al registrar el usuario:', error.response);
         });
     }
-  }
+  },
 };
 </script>
