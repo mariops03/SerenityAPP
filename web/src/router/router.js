@@ -7,6 +7,7 @@ import Home from '../views/Home.vue';
 import Acerca from '../views/Acerca.vue';
 import Contacto from '../views/Contacto.vue';
 import Signup from '../views/Signup.vue';
+import LandingPage from '../views/LandingPage.vue';
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path: '/signup',
     component: Signup,
     meta: { guestOnly: true }
+  },
+  {
+    name: 'LandingPage',
+    path: '/landing',
+    component: LandingPage
   }
 ];
 
@@ -54,6 +60,8 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   const authStore = useAuthStore();
+
+  if(to.name === 'LandingPage') return next();
 
   try {
     const response = await axios.get('http://localhost:3000/api/verify-auth', { withCredentials: true });
