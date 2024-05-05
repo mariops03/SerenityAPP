@@ -3,8 +3,8 @@
       <!-- Encabezado -->
       <header class="header">
         <img src="../../logo1.png" alt="Logo" class="logo">
-        <h1>SerenityApp</h1>
-        <router-link to="/signin" class="btn">Probar SerenityApp</router-link>
+        <h1>Serenity App</h1>
+        <router-link to="/signin" class="btn">Probar Serenity App</router-link>
       </header>
   
       <!-- Contenido principal -->
@@ -27,7 +27,7 @@
         </section>
 
         <section class="contact">
-        <h2>Contacto</h2>
+        <h2>Contáctanos</h2>
         <p>Puedes ponerte en contacto con nosotros a través de:</p>
         <ul>
           <p>serenitydevteam@gmail.com</p>
@@ -51,6 +51,11 @@
   </script>
   
   <style scoped>
+  @font-face {
+  font-family: "KatahdinRound";
+  src: local("KatahdinRound"),
+    url("../assets/fonts/KatahdinRound.otf") format("opentype");
+    }
   /* Estilos básicos */
   .landing-page {
     max-width: 1200px;
@@ -62,20 +67,32 @@
     text-align: center;
     margin-bottom: 40px;
   }
+
+   .header h1 {
+        font-size: 6em;
+        font-family: "KatahdinRound", fantasy;
+        color: #18373e;
+    }
   
   .logo {
-    width: 100px; /* ajusta el tamaño según tu logo */
+    width: 350px; /* ajusta el tamaño según tu logo */
   }
   
   .btn {
-    display: block;
+    display: incline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 25px 50px;
+    font-size: 2em;
     text-decoration: none;
     color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
+    background-color: #006285;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease; /* Añadimos una transición al cambio de color */
+  }
+
+  .btn:hover {
+    background-color: #18373e; /* Cambiamos el color al hacer hover */
   }
   
   .main-content {
