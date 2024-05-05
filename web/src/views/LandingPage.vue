@@ -1,5 +1,6 @@
 <template>
-    <div class="landing-page">
+    <div class="landing-page-background">
+      <v-container class="landing-page">
       <!-- Encabezado -->
       <header class="header">
         <img src="../../logo1.png" alt="Logo" class="logo">
@@ -9,13 +10,15 @@
   
       <!-- Contenido principal -->
       <main class="main-content">
-        <section class="about-us">
-            <h2>Acerca de nosotros</h2>
-            <p>¡Bienvenido a SerenityApp! Entendemos la molestia de las jaquecas, así que creamos una solución sencilla. Nuestra aplicación ofrece alivio natural para los dolores de cabeza a través de vibraciones innovadoras, sonidos relajantes y melodías suaves, todo convenientemente en tu dispositivo de confianza.</p>
-            <p>Imagina tener un remedio para los dolores de cabeza que cabe en tu bolsillo y que relaja los músculos, mejora la circulación sanguínea y crea una atmósfera tranquila en cualquier momento y lugar. Desarrollada con expertos, nuestra aplicación es fácil de usar y completamente portátil, ayudándote discretamente en bibliotecas, aulas o en casa.</p>
-            <p>También estamos desarrollando una banda complementaria para mejorar tu experiencia, perfecta para actividades diarias en casa, ofreciendo tranquilidad.</p>
-            <p>"SerenityApp" no es solo una aplicación; es tu compañero personal de bienestar, prometiendo alivio y tranquilidad sin complicaciones ni efectos secundarios.</p>
-        </section>
+          <v-card class="about-us">
+            <v-card-title>¿Qué es SerenityApp?</v-card-title>
+            <v-card-text>
+              <p>¡Bienvenido a SerenityApp! Entendemos la molestia de las jaquecas, así que creamos una solución sencilla. Nuestra aplicación ofrece alivio natural para los dolores de cabeza a través de vibraciones innovadoras, sonidos relajantes y melodías suaves, todo convenientemente en tu dispositivo de confianza.</p>
+              <p>Imagina tener un remedio para los dolores de cabeza que cabe en tu bolsillo y que relaja los músculos, mejora la circulación sanguínea y crea una atmósfera tranquila en cualquier momento y lugar. Desarrollada con expertos, nuestra aplicación es fácil de usar y completamente portátil, ayudándote discretamente en bibliotecas, aulas o en casa.</p>
+              <p>También estamos desarrollando una banda complementaria para mejorar tu experiencia, perfecta para actividades diarias en casa, ofreciendo tranquilidad.</p>
+              <p>"SerenityApp" no es solo una aplicación; es tu compañero personal de bienestar, prometiendo alivio y tranquilidad sin complicaciones ni efectos secundarios.</p>
+            </v-card-text>
+          </v-card>
 
         <section class="statistics">
             <h2>Estadísticas</h2>
@@ -36,7 +39,9 @@
       </main>
   
       <Footer />
-    </div>
+    </v-container>
+  </div>
+    
   </template>
   
   <script>
@@ -61,6 +66,13 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+  }
+
+  .landing-page-background {
+    margin: 0 auto;
+    padding: 20px;
+    background: lightblue;
+    width: 100%;
   }
   
   .header {
@@ -95,8 +107,9 @@
     background-color: #18373e; /* Cambiamos el color al hacer hover */
   }
   
-  .main-content {
-    /* Estilos adicionales se agregarán en pasos posteriores */
+  .about-us {
+    border-radius: 10px;
+    font-family: "KatahdinRound", fantasy;
   }
   
   .footer {
