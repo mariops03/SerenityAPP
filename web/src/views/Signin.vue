@@ -77,7 +77,7 @@ export default {
         password: this.password
       };
       
-      axios.post('http://localhost:3000/api/users/login', user, { withCredentials: true })
+      axios.post('http://143.47.52.226:3000/api/users/login', user, { withCredentials: true })
         .then(response => {
           console.log('Inicio de sesión exitoso:', response.data);
           this.$router.push({ name: 'Home' });

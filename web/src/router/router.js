@@ -93,7 +93,7 @@ router.beforeEach(async (to, from, next) => {
   if(to.name === 'LandingPage') return next();
 
   try {
-    const response = await axios.get('http://localhost:3000/api/verify-auth', { withCredentials: true });
+    const response = await axios.get('http://143.47.52.226:3000/api/verify-auth', { withCredentials: true });
     authStore.authenticate(true);
     console.log("Autenticación verificada:", response.data);
 

@@ -67,7 +67,7 @@ export default {
         password: this.password
       };
       
-      axios.post('http://localhost:3000/api/users', user, )
+      axios.post('http://143.47.52.226:3000/api/users', user, )
         .then(response => {
           console.log('Usuario registrado con éxito:', response.data);
           this.$router.push({ name: 'Home' });
