@@ -5,12 +5,12 @@
       <header class="header">
         <img src="../../logo1.png" alt="Logo" class="logo">
         <h1>Serenity App</h1>
-        <router-link to="/signin" class="btn">Probar Serenity App</router-link>
+        <router-link to="/signup" class="btn">Probar Serenity App</router-link>
       </header>
   
       <!-- Contenido principal -->
       <main class="main-content">
-          <v-card class="about-us">
+          <v-card class="about-us pa-5 card">
             <v-card-title>¿Qué es SerenityApp?</v-card-title>
             <v-card-text>
               <p>¡Bienvenido a SerenityApp! Entendemos la molestia de las jaquecas, así que creamos una solución sencilla. Nuestra aplicación ofrece alivio natural para los dolores de cabeza a través de vibraciones innovadoras, sonidos relajantes y melodías suaves, todo convenientemente en tu dispositivo de confianza.</p>             
@@ -25,7 +25,7 @@
             </v-card-text>
           </v-card>
 
-          <v-card class="statistics">
+          <v-card class="statistics card pa-5">
             <v-row>
               <v-col cols="4" class="stat-item">
                 <div class="stat-label">Usuarios registrados</div>
@@ -170,6 +170,20 @@
   .contact a {
   font-size: 1.5em; /* Ajusta el tamaño según tus preferencias */
   color: #137968; /* Opcional: cambia el color del enlace */
+  }
+
+  .card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  align-items: center;
+  padding: 10px 20px;
 }
 
 

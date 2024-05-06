@@ -16,20 +16,20 @@
           <p>Dirección: Pl. Caídos, s/n, 37008 Salamanca, España</p>
         </div>
       </div>
-      <div class="contact-form">
+      <div class="card">
         <h2>Envíanos un mensaje</h2>
         <form>
           <div class="form-group">
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+            <input class="input" type="text" id="name" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input class="input" type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
             <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea class="input" id="message" name="message" rows="5" required></textarea>
           </div>
           <button type="submit">Enviar mensaje</button>
         </form>
@@ -89,6 +89,20 @@
   .form-group label {
     font-weight: bold;
   }
+
+  .card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  align-items: center;
+  padding: 10px 20px;
+}
   
   .form-group input,
   .form-group textarea {
@@ -114,6 +128,14 @@
   
   button[type="submit"]:hover {
     background-color: #0056b3;
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.23);
   }
   </style>
   

@@ -98,7 +98,7 @@ router.beforeEach(async (to, from, next) => {
     console.log("Autenticación verificada:", response.data);
 
     if (to.meta.requiresAuth && !authStore.isAuthenticated) {
-      next({ name: 'Signin' });
+      next({ name: 'LandingPage' });
     } else if (to.meta.guestOnly && authStore.isAuthenticated) {
       next({ name: 'Home' });
     } else {
@@ -109,7 +109,7 @@ router.beforeEach(async (to, from, next) => {
     authStore.authenticate(false);
 
     if (to.meta.requiresAuth) {
-      next({ name: 'Signin' });
+      next({ name: 'LandingPage' });
     } else {
       next();
     }
