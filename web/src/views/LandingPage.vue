@@ -13,27 +13,40 @@
           <v-card class="about-us">
             <v-card-title>¿Qué es SerenityApp?</v-card-title>
             <v-card-text>
-              <p>¡Bienvenido a SerenityApp! Entendemos la molestia de las jaquecas, así que creamos una solución sencilla. Nuestra aplicación ofrece alivio natural para los dolores de cabeza a través de vibraciones innovadoras, sonidos relajantes y melodías suaves, todo convenientemente en tu dispositivo de confianza.</p>
-              <p>Imagina tener un remedio para los dolores de cabeza que cabe en tu bolsillo y que relaja los músculos, mejora la circulación sanguínea y crea una atmósfera tranquila en cualquier momento y lugar. Desarrollada con expertos, nuestra aplicación es fácil de usar y completamente portátil, ayudándote discretamente en bibliotecas, aulas o en casa.</p>
-              <p>También estamos desarrollando una banda complementaria para mejorar tu experiencia, perfecta para actividades diarias en casa, ofreciendo tranquilidad.</p>
-              <p>"SerenityApp" no es solo una aplicación; es tu compañero personal de bienestar, prometiendo alivio y tranquilidad sin complicaciones ni efectos secundarios.</p>
+              <p>¡Bienvenido a SerenityApp! Entendemos la molestia de las jaquecas, así que creamos una solución sencilla. Nuestra aplicación ofrece alivio natural para los dolores de cabeza a través de vibraciones innovadoras, sonidos relajantes y melodías suaves, todo convenientemente en tu dispositivo de confianza.</p>             
+              <br>
+              <p>Imagina tener un remedio para los dolores de cabeza que cabe en tu bolsillo y que relaja los músculos, mejora la circulación sanguínea y crea una atmósfera tranquila en cualquier momento y lugar.</p> 
+              <br>
+              <p>Desarrollada con expertos, nuestra aplicación es fácil de usar y completamente portátil, ayudándote discretamente en bibliotecas, aulas o en casa.</p>  
+              <br>
+              <p>También estamos desarrollando una banda para la cabeza complementaria para mejorar tu experiencia, perfecta para actividades diarias en casa, ofreciendo tranquilidad.</p>
+              <br>
+              <p>"SerenityApp" no es solo una aplicación, es tu compañero personal de bienestar, prometiendo alivio y tranquilidad sin complicaciones ni efectos secundarios.</p>
             </v-card-text>
           </v-card>
 
-        <section class="statistics">
-            <h2>Estadísticas</h2>
-            <ul>
-                <li>Usuarios registrados: 8.968</li>
-                <li>Versión actual del programa: 1.0.0</li>
-                <li>Fecha de lanzamiento de la versión: 05/05/2024</li>
-            </ul>
-        </section>
+          <v-card class="statistics">
+            <v-row>
+              <v-col cols="4" class="stat-item">
+                <div class="stat-label">Usuarios registrados</div>
+                <div class="stat-number">8.968</div>
+              </v-col>
+              <v-col cols="4" class="stat-item">
+                <div class="stat-label">Versión actual del programa</div>
+                <div class="stat-number">1.2.1</div>
+              </v-col>
+              <v-col cols="4" class="stat-item">
+                <div class="stat-label">Fecha de lanzamiento</div>
+                <div class="stat-number">05/05/24</div>
+              </v-col>
+            </v-row>
+          </v-card>
 
         <section class="contact">
         <h2>Contáctanos</h2>
         <p>Puedes ponerte en contacto con nosotros a través de:</p>
         <ul>
-          <p>serenitydevteam@gmail.com</p>
+          <a href="mailto:serenitydevteam@gmail.com?subject=Consulta%20Sobre%20Serenity%20App">serenitydevteam@gmail.com</a>
         </ul>
       </section>
       </main>
@@ -57,10 +70,22 @@
   
   <style scoped>
   @font-face {
-  font-family: "KatahdinRound";
-  src: local("KatahdinRound"),
+    font-family: "KatahdinRound";
+    src: local("KatahdinRound"),
     url("../assets/fonts/KatahdinRound.otf") format("opentype");
-    }
+  }
+
+  @font-face {
+    font-family: 'Questrial';
+    src: local('Questrial'), url("../assets/fonts/Questrial-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  p {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.5em;
+  }
+
   /* Estilos básicos */
   .landing-page {
     max-width: 1200px;
@@ -77,13 +102,14 @@
   
   .header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 
    .header h1 {
         font-size: 6em;
         font-family: "KatahdinRound", fantasy;
         color: #18373e;
+        margin-bottom: 35px;
     }
   
   .logo {
@@ -106,12 +132,47 @@
   .btn:hover {
     background-color: #18373e; /* Cambiamos el color al hacer hover */
   }
-  
-  .about-us {
-    border-radius: 10px;
-    font-family: "KatahdinRound", fantasy;
+
+  .main-content {
+    margin-bottom: 40px;
+    font-family: 'Questrial', sans-serif;
   }
   
+  .v-card-title {
+  font-size: 2em; /* Ajusta el tamaño según tus preferencias */
+  font-weight: bold;
+}
+  .about-us {
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .stat-item {
+    text-align: center;
+    
+  }
+
+  .stat-number {
+    font-size: 4em;
+    font-weight: bold;
+  }
+
+  .stat-label {
+    font-size: 1.5em;
+  }
+
+  .contact {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .contact a {
+  font-size: 1.5em; /* Ajusta el tamaño según tus preferencias */
+  color: #137968; /* Opcional: cambia el color del enlace */
+}
+
+
   .footer {
     text-align: center;
     margin-top: 40px;
