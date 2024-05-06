@@ -7,7 +7,10 @@
     <div class="loading-spinner">
       <v-progress-circular
         v-if="loading"
-        color="primary"
+        rotate="-90"
+        size="100"
+        width="15"
+        color="#1976D2"
         indeterminate
       ></v-progress-circular>
     </div>
@@ -67,7 +70,7 @@ export default {
         } else {
           clearInterval(interval);
           this.loading = false;
-          this.$router.push({ name: 'Home', params: { boton: "true" } });
+          this.$router.push({ name: 'ResultadosAnalisis' });
         }
       }, 1000);
     },
@@ -93,18 +96,18 @@ export default {
 
 .loading-spinner {
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
 }
 
 .comments {
   position: fixed;
-  top: 60%; /* Ajusta la posición vertical de los comentarios según sea necesario */
+  top: 60%; 
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  color: white; /* Color de los comentarios */
+  color: white;
 }
 
 .comment {
@@ -114,7 +117,7 @@ export default {
 }
 
 .first-comment {
-  animation-delay: 0.5s; /* Retraso para el primer comentario */
+  animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {

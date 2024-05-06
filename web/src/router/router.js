@@ -8,6 +8,10 @@ import Acerca from '../views/Acerca.vue';
 import Contacto from '../views/Contacto.vue';
 import Signup from '../views/Signup.vue';
 import LandingPage from '../views/LandingPage.vue';
+import Profile from '../views/Profile.vue';
+import ResultadosAnalisis from '../views/ResultadosAnalisis.vue';
+import Aliviar from '../views/Aliviar.vue';
+import Historial from '../views/Historial.vue';
 
 const routes = [
   {
@@ -50,7 +54,32 @@ const routes = [
     name: 'LandingPage',
     path: '/landing',
     component: LandingPage
+  },
+  {
+    name: 'Profile',
+    path: '/profile',
+    component: Profile,
+    meta: { requiresAuth: true }
+  },
+  {
+    name: 'ResultadosAnalisis',
+    path: '/resultados-analisis',
+    component: ResultadosAnalisis,
+    meta: { requiresAuth: true }
+  },
+  {
+    name: 'Aliviar',
+    path: '/aliviar',
+    component: Aliviar,
+    meta: { requiresAuth: true }
+  },
+  {
+    name: 'Historial',
+    path: '/historial',
+    component: Historial,
+    meta: { requiresAuth: true }
   }
+
 ];
 
 const router = createRouter({

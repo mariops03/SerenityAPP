@@ -27,7 +27,8 @@ User
 
     <v-row align="center" justify="center">
       <v-col cols="11" md="6" lg="4" xl="2">
-        <button class="secondary-button btn-transparent">
+        <button class="secondary-button btn-transparent"
+          @click="redirectToHistorial">
           Historial de Análisis
         </button>
       </v-col>
@@ -51,6 +52,9 @@ export default {
   methods: {
     redirectToAnalisis() {
       this.$router.push("/analisis");
+    },
+    redirectToHistorial() {
+      this.$router.push("/historial");
     },
   },
 };
@@ -77,7 +81,7 @@ export default {
     rgba(101, 171, 170, 0.5),
     rgba(34, 88, 142, 0.5)
   );
-  font-family: "KatahdinRound", fantasy; /* Aquí agregamos la fuente instalada */
+  font-family: "KatahdinRound", fantasy; 
   padding: 20px;
   font-weight: normal;
   font-size: 40px;
@@ -102,7 +106,7 @@ export default {
 .btn-logo {
   width: fit-content;
   border-radius: 350px;
-  margin-left: auto; /* Centra a la izquierda */
-  margin-right: auto; /* Centra a la derecha */
+  margin-left: auto; 
+  margin-right: auto; 
 }
 </style>
