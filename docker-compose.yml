@@ -1,0 +1,16 @@
+version '3.8'
+services:
+  backend:
+    build: ./server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/app
+    command: npm start
+
+  frontend:
+    build: ./web
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./web:/app
