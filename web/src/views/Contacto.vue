@@ -1,5 +1,7 @@
 <template>
+    
     <div class="contact">
+      <Navbar />
       <h1>Contacto</h1>
       <p>¡Nos encantaría escuchar de ti! Ponte en contacto con nosotros a través de los siguientes medios:</p>
       <div class="contact-info">
@@ -38,6 +40,7 @@
   </template>
   
   <script>
+
   export default {
     name: 'Contact'
   }

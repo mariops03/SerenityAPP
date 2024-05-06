@@ -11,11 +11,12 @@
         <v-col
           v-for="(item, index) in historial"
           :key="index"
-          cols="6"
+          cols="12"
+          xl="6"
         >
           <v-card class="historial-card">
-            <v-card-title>{{ item.fecha }}</v-card-title>
-            <v-card-text>{{ item.resumen }}</v-card-text>
+            <v-card-text style="font-size: large; font-weight: 700;">{{ item.fecha }}</v-card-text>
+            <v-card-text style="font-size: medium">{{ item.resumen }}</v-card-text>
               <v-icon size="36">mdi-robot-happy</v-icon>
           </v-card>
         </v-col>
