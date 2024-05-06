@@ -7,7 +7,7 @@ export default {
   },
   computed: {
     verNavbar() {
-      return this.$route.path !== "/landing";
+      return this.$route.path !== "/landing" && this.$route.path !== "/signin" && this.$route.path !== "/signup"
     }
   }
 }
