@@ -12,9 +12,8 @@ RUN npm install
 
 # Copiar el resto del código fuente del frontend
 COPY . .
-
 # Exponer el puerto que utiliza Vue.js, comúnmente 8080
-EXPOSE 8080
+EXPOSE 5173
 
 # Comando para iniciar el servidor de desarrollo
 CMD ["npm", "run", "dev"]
