@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 app.use(cors({
   //origin: 'http://localhost:5173',
   
-  origin: '*',
+  origin: true,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
