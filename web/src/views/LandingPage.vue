@@ -3,7 +3,7 @@
       <v-container class="landing-page">
       <!-- Encabezado -->
       <header class="header">
-        <img src="../../logo1.png" alt="Logo" class="logo">
+        <img src="../../public/logo1.png" alt="Logo" class="logo">
         <h1>Serenity App</h1>
         <router-link to="/signup" class="btn">Probar Serenity App</router-link>
       </header>
