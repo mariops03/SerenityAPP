@@ -6,8 +6,6 @@ services:
       - "3000:3000"
     volumes:
       - ./server:/app
-    command: npm start
-
   frontend:
     build: ./web
     ports:
