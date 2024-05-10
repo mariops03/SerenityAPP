@@ -1,7 +1,7 @@
 <template>
     
       <v-main>
-        <Use :boton="boton" />
+        <Use/>
       </v-main>
       <Footer />
   </template>

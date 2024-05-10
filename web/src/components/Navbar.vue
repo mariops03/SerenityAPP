@@ -12,7 +12,7 @@
             </a>
           </div>
           <div class="navbar-brand">
-            <img src="../../public/logo1.png" style="width: 100px; max-width: 15vw" alt="SerenityAPP" />
+            Serenity
           </div>
           <div class="d-flex" style="margin-left: 20%">
             <a class="navbar-item" @click="navigateTo('contacto')">
@@ -62,6 +62,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -81,7 +83,10 @@ export default {
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-family: 'Questrial', sans-serif;
+  font-weight: 500;
+  
 }
 
 .navbar-menu {

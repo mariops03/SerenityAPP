@@ -87,7 +87,7 @@ const router = createRouter({
   routes
 });
 
-router.beforeEach(async (to, from, next) => {
+/* router.beforeEach(async (to, from, next) => {
   const authStore = useAuthStore();
 
   if(to.name === 'LandingPage') return next();
@@ -114,6 +114,6 @@ router.beforeEach(async (to, from, next) => {
       next();
     }
   }
-});
+}); */
 
 export default router;

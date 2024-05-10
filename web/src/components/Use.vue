@@ -1,38 +1,27 @@
 User
 <template>
   <v-container>
+    <div class="my-10">
+      <h1 class="titulo text-center">Bienvenido</h1>
+      <p class="text-center">Tomas no tiene pene</p>
+    </div>
     <v-row style="height: 40vh" align="center" justify="center">
-      <v-col cols="11" md="12" lg="8" xl="4">
-        <button
-          v-if="boton"
-          class="btn-transparent primary-button"
-          @click="redirectToAnalisis"
-        >
-          REALIZAR ANÁLISIS
-        </button>
-        <button
-          v-else
-          class="btn-transparent secondary-button btn-logo"
-          @click="redirectToServicios"
-        >
-          <img
-            src="../../public/logo1.png"
-            alt="Logo"
-            style="width: 150px; max-width: 15vw"
-            class="mt-1"
-          />
-        </button>
-      </v-col>
-    </v-row>
-
-    <v-row align="center" justify="center">
-      <v-col cols="11" md="6" lg="4" xl="2">
-        <button class="secondary-button btn-transparent"
-          @click="redirectToHistorial">
+      <!-- Historial de Análisis -->
+      <v-col cols="11" md="6" lg="4" xl="2" class="order-1 order-lg-0">
+        <button class="secondary-button btn-transparent" @click="redirectToHistorial">
           Historial de Análisis
         </button>
       </v-col>
-      <v-col cols="11" md="6" lg="4" xl="2">
+      <!-- Botón Principal -->
+      <v-col cols="11" md="12" lg="8" xl="4" class="order-0 order-lg-1">
+        <div style="display: flex; justify-content: center">
+          <button class="primary-button" @click="redirectToAnalisis">
+            <img src="../../public/logo1.png" alt="SerenityAPP" style="width: 300px"/>
+          </button>
+        </div>
+      </v-col>
+      <!-- Historial de Servicios -->
+      <v-col cols="11" md="6" lg="4" xl="2" class="order-2 order-lg-2">
         <button class="secondary-button btn-transparent">
           Historial de Servicios
         </button>
@@ -40,6 +29,7 @@ User
     </v-row>
   </v-container>
 </template>
+
 
 <script>
 export default {
@@ -69,44 +59,41 @@ export default {
 
 .btn-transparent {
   border-radius: 15px;
-  border: 1px solid rgba(224, 224, 224, 0.6);
   padding: 10px;
   width: 100%;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .primary-button {
-  background-image: linear-gradient(
-    to bottom left,
-    rgba(101, 171, 170, 0.5),
-    rgba(34, 88, 142, 0.5)
-  );
-  font-family: "KatahdinRound", fantasy; 
-  padding: 20px;
-  font-weight: normal;
-  font-size: 40px;
-  backdrop-filter: blur(5px);
-  height: max-content;
-  color: #313131;
-  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 150px;
+  transition: transform 0.5s ease;
+}
+
+.primary-button:hover {
+  transform: scale(1.03); /* Adjust the scale factor as needed */
 }
 
 .secondary-button {
-  background-image: linear-gradient(
-    to bottom left,
-    rgba(175, 139, 204, 0.5),
-    rgba(52, 110, 167, 0.5)
-  );
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
   backdrop-filter: blur(5px);
   font-weight: bold;
   color: #2a2a2a;
+  font-size: large;
 }
 
 .btn-logo {
   width: fit-content;
   border-radius: 350px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo {
+  font-family: "KatahdinRound", fantasy;
+  font-size: 50px;
+  font-weight: normal;
+  color: #2a2a2a;
 }
 </style>
