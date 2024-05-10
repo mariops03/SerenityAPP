@@ -6,12 +6,12 @@
     <!-- Rueda de carga -->
     <div class="loading-spinner">
       <v-progress-circular
-        v-if="loading"
-        rotate="-90"
-        size="100"
-        width="15"
-        color="#1976D2"
-        indeterminate
+      v-if="loading"
+      rotate="-90"
+      size="100"
+      width="15"
+      color='black'
+      indeterminate
       ></v-progress-circular>
     </div>
 
@@ -20,15 +20,22 @@
       <div
         v-if="firstComment"
         class="comment first-comment"
-        :style="{ color: commentColor }"
+        :style="{ color: 'black' }"
       >
         {{ firstComment }}
+      </div>
+      <div
+        v-if="firstComment"
+        class="comment first-comment"
+        :style="{ color: 'black' }"
+      >
+        <br>
       </div>
       <div
         v-for="(comment, index) in displayedComments"
         :key="index"
         class="comment"
-        :style="{ color: commentColor }"
+        :style="{ color: 'black' }"
       >
         {{ comment }}
       </div>
@@ -42,17 +49,17 @@ export default {
     return {
       loading: true,
       firstComment: "Analizando..",
+      secondComment: "",
       comments: [
-        "Analizando los dolores de cabeza frontales... Recopilando datos de la zona delantera del cráneo.",
-        "Analizando los dolores de cabeza laterales... Verificando la actividad de los músculos temporales.",
-        "Analizando los dolores de cabeza occipitales... Investigando la tensión en la parte posterior del cráneo.",
-        "Analizando los dolores de cabeza cervicales... Revisando la postura y la tensión en el cuello.",
-        "Analizando los dolores de cabeza sin aura... Examinando posibles desencadenantes sin síntomas visuales.",
-        "Analizando los dolores de cabeza con aura... Observando patrones visuales y posibles síntomas premonitorios.",
-        "Analizando historial... Explorando datos previos para identificar tendencias y factores desencadenantes.",
+        "Explorando dolores de cabeza frontales... Recopilando datos de la zona delantera del cráneo.",
+        "Evaluando dolores de cabeza laterales... Verificando la actividad de los músculos temporales.",
+        "Investigando dolores de cabeza occipitales... Investigando la tensión en la parte posterior del cráneo.",
+        "Revisando dolores de cabeza cervicales... Revisando la postura y la tensión en el cuello.",
+        "Estudiando dolores de cabeza sin aura... Examinando posibles desencadenantes sin síntomas visuales.",
+        "Observando dolores de cabeza con aura... Observando patrones visuales y posibles síntomas premonitorios.",
+        "Analizando historial médico... Explorando datos previos para identificar tendencias y factores desencadenantes.",
       ],
       displayedComments: [],
-      commentColor: "#1976D2", // Color de los comentarios
     };
   },
   mounted() {
@@ -96,14 +103,14 @@ export default {
 
 .loading-spinner {
   position: fixed;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -30%);
 }
 
 .comments {
   position: fixed;
-  top: 60%; 
+  top: 35%; 
   left: 50%;
   transform: translateX(-50%);
   text-align: center;

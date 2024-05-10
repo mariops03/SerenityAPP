@@ -2,7 +2,7 @@
     <v-container>
       <v-row>
         <v-col cols="12">
-          <h2>Resultado del Análisis</h2>
+          <h2 style="font-size: 32px;">Resultado del Análisis</h2>
         </v-col>
       </v-row>
   
@@ -10,7 +10,7 @@
       <v-row>
         <!-- Tarjeta de Resumen del Paciente -->
         <v-col cols="12" md="6">
-          <v-card class="custom-card">
+          <v-card class="custom-card" style="height: 100%;">
             <v-card-title>Resumen del Paciente</v-card-title>
             <v-card-text>
               <p>{{ paciente.nombre }}, {{ paciente.edad }} años.</p>
@@ -21,7 +21,7 @@
   
         <!-- Tarjeta de Dolor de Cabeza -->
         <v-col cols="12" md="6">
-          <v-card class="custom-card">
+          <v-card class="custom-card" style="height: 100%;">
             <v-card-title>Cabeza</v-card-title>
             <v-card-text>
               <p>{{ paciente.comentarioDolorCabeza }}</p>
@@ -34,15 +34,13 @@
       <v-row>
         <!-- Tarjeta de Niveles de Estrés -->
         <v-col cols="12" md="6">
-          <v-card class="custom-card">
+          <v-card class="custom-card" style="height: 100%;">
             <v-card-title>Niveles de Estrés</v-card-title>
             <v-card-text>
               <v-progress-circular
-                rotate="-90"
                 size="100"
                 width="15"
-                :value="paciente.estres"
-                color="red"
+                :model-value="paciente.estres"
               >{{ paciente.estres }}%</v-progress-circular>
               <p style="margin-top: 20px;">{{ paciente.comentarioEstres }}</p>
             </v-card-text>
@@ -51,15 +49,13 @@
   
         <!-- Tarjeta de Horas de Sueño -->
         <v-col cols="12" md="6">
-          <v-card class="custom-card">
+          <v-card class="custom-card" style="height: 100%;">
             <v-card-title>Horas de Sueño</v-card-title>
             <v-card-text>
               <v-progress-circular
-                rotate="-90"
                 size="100"
                 width="15"
-                :value="paciente.sueno"
-                color="blue"
+                :model-value="paciente.sueno"
               >{{ paciente.sueno }}%</v-progress-circular>
               <p style="margin-top: 20px;">{{ paciente.comentarioSueno }}</p>
             </v-card-text>
@@ -68,7 +64,7 @@
       </v-row>
   
       <v-row class="justify-center">
-        <v-col cols="12" class="text-center">
+        <v-col cols="12" class="text-center mt-16">
             <button
             class="btn-transparent primary-button"
             style="width: 50%;"
@@ -102,7 +98,6 @@
     },
     methods: {
       cargarDatosPaciente() {
-        setTimeout(() => {
           this.paciente = {
             nombre: 'Jorge Camacho Gomez',
             edad: 23,
@@ -113,7 +108,6 @@
             comentarioSueno: 'El paciente duerme menos de las horas recomendadas.',
             comentarioDolorCabeza: 'Se han detectado fuertes irregularidades en diferentes zonas de la cabeza.'
           };
-        }, 1000);
       },
       realizarAlivio() {
         console.log("Iniciando proceso de alivio...");
@@ -124,11 +118,7 @@
   </script>
   <style scoped>
     .custom-card {
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0)
-    );
+    background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -143,5 +133,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
     }
+
+    .v-card-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    }
+
 </style>

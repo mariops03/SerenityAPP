@@ -23,7 +23,7 @@ exports.createUser = async (req, res) => {
 
     await user.save();
     const token = jwt.sign({ id: user._id }, 'ministro', { expiresIn: '1h' });
-    res.cookie('token', token, { httpOnly: true });
+    res.cookie('token', token, { httpOnly: true, sameSite: 'none', secure: true });
     res.status(201).json({ message: 'Usuario registrado con éxito', user: { id: user._id, email: user.email } });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -88,7 +88,7 @@ exports.loginUser = async (req, res) => {
         return res.status(401).json({ message: 'Contraseña incorrecta' });
       }
       const token = jwt.sign({ id: user._id }, 'ministro', { expiresIn: '1h' });
-      res.cookie('token', token, { httpOnly: true });
+      res.cookie('token', token, { httpOnly: true, sameSite: 'none', secure: true });
       res.json({ message: 'Inicio de sesión exitoso', user: { id: user._id, email: user.email } });
     } catch (error) {
       res.status(500).json({ message: error.message });
