@@ -5,7 +5,7 @@
       <header class="header">
         <img src="../../public/logo1.png" alt="Logo" class="logo">
         <h1>Serenity App</h1>
-        <router-link to="/signup" class="btn">Probar Serenity App</router-link>
+        <router-link to="/signin" class="btn">Probar Serenity App</router-link>
       </header>
   
       <!-- Contenido principal -->
