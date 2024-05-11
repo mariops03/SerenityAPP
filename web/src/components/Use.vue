@@ -67,11 +67,16 @@ export default {
 .primary-button {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 150px;
-  transition: transform 0.5s ease;
+  animation: scaleAnimation 6s infinite alternate;
 }
 
-.primary-button:hover {
-  transform: scale(1.03); /* Adjust the scale factor as needed */
+@keyframes scaleAnimation {
+  0%, 100% {  
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
 }
 
 .secondary-button {

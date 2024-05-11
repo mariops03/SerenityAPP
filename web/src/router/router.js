@@ -12,6 +12,7 @@ import Profile from '../views/Profile.vue';
 import ResultadosAnalisis from '../views/ResultadosAnalisis.vue';
 import Aliviar from '../views/Aliviar.vue';
 import Historial from '../views/Historial.vue';
+import ResultadosAlivio from '../views/ResultadosAlivio.vue';
 
 const routes = [
   {
@@ -77,6 +78,12 @@ const routes = [
     name: 'Historial',
     path: '/historial',
     component: Historial,
+    meta: { requiresAuth: true }
+  },
+  {
+    name: 'ResultadosAlivio',
+    path: '/resultados-alivio',
+    component: ResultadosAlivio,
     meta: { requiresAuth: true }
   }
 

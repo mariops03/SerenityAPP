@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row class="justify-center">
-      <v-col cols="12" class="text-center mt-16">
+      <v-col cols="12" class="text-center mt-6 mb-6">
         <button
           class="boton"
           style="width: 50%; color: primary"

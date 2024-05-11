@@ -49,7 +49,6 @@ export default {
     return {
       loading: true,
       firstComment: "Analizando..",
-      secondComment: "",
       comments: [
         "Explorando dolores de cabeza frontales... Recopilando datos de la zona delantera del cráneo.",
         "Evaluando dolores de cabeza laterales... Verificando la actividad de los músculos temporales.",
@@ -93,13 +92,6 @@ export default {
   height: 100%;
 }
 
-.overlay {
-  min-height: 100vh;
-  background-image: url("./fondo3.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .loading-spinner {
   position: fixed;
