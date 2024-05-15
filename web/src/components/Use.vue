@@ -3,25 +3,24 @@ User
   <v-container>
     <div class="my-10">
       <h1 class="titulo text-center">Bienvenido</h1>
-      <p class="text-center">Tomas no tiene pene</p>
     </div>
     <v-row style="height: 40vh" align="center" justify="center">
       <!-- Historial de Análisis -->
-      <v-col cols="11" md="6" lg="4" xl="2" class="order-1 order-lg-0">
+      <v-col cols="12" md="4" lg="3" class="d-flex justify-center order-1 order-md-0"> 
         <button class="secondary-button btn-transparent" @click="redirectToHistorial">
           Historial de Análisis
         </button>
       </v-col>
       <!-- Botón Principal -->
-      <v-col cols="11" md="12" lg="8" xl="4" class="order-0 order-lg-1">
+      <v-col cols="12" md="4" lg="3" class="d-flex justify-center order-0 order-lg-1">
         <div style="display: flex; justify-content: center">
           <button class="primary-button" @click="redirectToAnalisis">
-            <img src="../../public/logo1.png" alt="SerenityAPP" style="width: 300px"/>
+            <img src="../../public/logo1.png" alt="SerenityAPP" style="width: 33vh"/>
           </button>
         </div>
       </v-col>
       <!-- Historial de Servicios -->
-      <v-col cols="11" md="6" lg="4" xl="2" class="order-2 order-lg-2">
+      <v-col cols="12" md="4" lg="3" class="d-flex justify-center order-2 order-lg-2">
         <button class="secondary-button btn-transparent">
           Historial de Servicios
         </button>
@@ -66,7 +65,7 @@ export default {
 
 .primary-button {
   background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 150px;
+  border-radius: 2000px;
   animation: scaleAnimation 6s infinite alternate;
 }
 
