@@ -23,20 +23,24 @@
                 >{{ resultado.alivioConseguido }}%</b
               ></v-progress-circular
             >
-            <v-textarea
-              v-model="feedbackUsuario"
-              label="¿Cómo se siente después del tratamiento?"
-              style="width: 80%"
-              auto-grow
-              class="mt-4"
-            ></v-textarea>
-            <v-btn color="#5ebdd9" class="mt-4" @click="enviarFeedback"
-              >Enviar comentarios</v-btn
-            >
+            <p class="mt-5">Por favor, indique como ha ido su tratamiento</p>
+            <div class="feedback-buttons mt-4">
+              <v-btn
+                v-for="n in 5"
+                :key="n"
+                :color="getButtonColor(n)"
+                class="ma-2"
+                @click="enviarFeedback(n)"
+              >
+                {{ n }}
+              </v-btn>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
+
+    <!-- MODAL DE FEEDBACK ENVIADO -->
     <v-dialog v-model="dialog" max-width="290">
       <v-card>
         <v-card-title class="headline">Feedback Enviado</v-card-title>
@@ -54,7 +58,6 @@
       </v-card>
     </v-dialog>
   </v-container>
-  <!-- MODAL DE FEEDBACK ENVIADO -->
 </template>
 
 <script>
@@ -62,17 +65,19 @@ export default {
   data() {
     return {
       resultado: {
-        alivioConseguido: 50,
+        alivioConseguido: Math.floor(Math.random() * (100 - 53 + 1)) + 53,
         comentarioAlivio: `El tratamiento ha sido efectivo en reducir los síntomas.`,
       },
-      feedbackUsuario: "",
       dialog: false,
     };
   },
   methods: {
-    enviarFeedback() {
+    enviarFeedback(n) {
+      console.log(`Feedback enviado: ${n}`);
       this.dialog = true;
-      // Aquí podrías agregar lógica para enviar el feedback a un servidor o manejarlo según la aplicación.
+      setTimeout(() => {
+        this.$router.push({ name: 'Home' });
+      }, 2500); // 2 segundos para mostrar el modal antes de redirigir
     },
     getColor(alivioConseguido) {
       if (alivioConseguido < 50) {
@@ -81,6 +86,22 @@ export default {
         return "#d76b00";
       } else {
         return "#004000";
+      }
+    },
+    getButtonColor(n) {
+      switch (n) {
+        case 1:
+          return "#c60000";
+        case 2:
+          return "#d76b00";
+        case 3:
+          return "#ffeb3b";
+        case 4:
+          return "#8bc34a";
+        case 5:
+          return "#004000";
+        default:
+          return "#000000";
       }
     },
   },
@@ -113,9 +134,14 @@ export default {
   margin-bottom: 10px;
 }
 
+.feedback-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .v-btn {
   border-radius: 20px;
-  font-weight: 600;
+  font-weight: 500;
   width: 35%;
 }
 </style>

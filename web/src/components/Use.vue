@@ -21,8 +21,8 @@ User
       </v-col>
       <!-- Historial de Servicios -->
       <v-col cols="12" md="4" lg="3" class="d-flex justify-center order-2 order-lg-2">
-        <button class="secondary-button btn-transparent">
-          Historial de Servicios
+        <button class="secondary-button btn-transparent" @click="redirectToConectar">
+          Conectar banda
         </button>
       </v-col>
     </v-row>
@@ -44,6 +44,15 @@ export default {
     },
     redirectToHistorial() {
       this.$router.push("/historial");
+    },
+    redirectToConectar() {
+    this.$router.push({
+      name: 'LoadingView',
+      state: {
+        message: 'Detectando dispositivos cercanos...',
+        redirectTo: 'Conectar'
+      }
+    });
     },
   },
 };

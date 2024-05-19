@@ -13,6 +13,8 @@ import ResultadosAnalisis from '../views/ResultadosAnalisis.vue';
 import Aliviar from '../views/Aliviar.vue';
 import Historial from '../views/Historial.vue';
 import ResultadosAlivio from '../views/ResultadosAlivio.vue';
+import Conectar from '../views/Conectar.vue';
+import LoadingView from '../views/LoadingView.vue';
 
 const routes = [
   {
@@ -85,7 +87,21 @@ const routes = [
     path: '/resultados-alivio',
     component: ResultadosAlivio,
     meta: { requiresAuth: true }
+  },
+  {
+    name: 'Conectar',
+    path: '/conectar',
+    component: Conectar,
+    meta: { requiresAuth: true }
+  },
+  {
+    name: 'LoadingView',
+    path: '/loading',
+    component: LoadingView,
+    meta: { requiresAuth: true },
+    props: true
   }
+
 
 ];
 

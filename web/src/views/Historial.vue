@@ -14,11 +14,11 @@
         cols="12"
         xl="6"
       >
-        <v-card class="historial-card" style="width: 100%;">
+        <v-card class="historial-card d-flex flex-column justify-space-between" style="height: 100%;">
           <v-card-text style="font-size: large; font-weight: 700; text-align: center; margin: 0 auto;">
             {{ item.analisis.fecha }} - {{ item.analisis.resumen }}
           </v-card-text>
-          <v-btn v-if="item.alivio" @click="mostrarAlivio(item.alivio)" color="blue" class="ma-2" style="align-self: center;">Ver Alivio</v-btn>
+          <v-btn v-if="item.alivio" @click="mostrarAlivio(item.alivio)" color="#4ABDFD" class="ma-2" style="align-self: center;">Ver Alivio</v-btn>
         </v-card>
       </v-col>
     </v-row>
@@ -54,21 +54,23 @@ export default {
 
 <style scoped>
 .historial-card {
-  background:  rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
   margin-bottom: 10px;
+  height: 100%;
 }
 
 .v-btn {
   border-radius: 20px;
-  font-weight: 600;
+  font-weight: 400;
   width: 35%;
 }
 </style>
