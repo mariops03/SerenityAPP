@@ -59,11 +59,7 @@ export default {
 
 <style scoped>
 .profile-container {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
