@@ -13,12 +13,12 @@
               </v-card-title>
               <v-card-subtitle>DNI: {{ user.dni }}</v-card-subtitle>
               <v-card-text>Edad: {{ user.age }} años</v-card-text>
-              <v-btn color="secondary" class="ma-2" @click="changePassword">Cambiar Contraseña</v-btn>
-              <v-btn color="secondary" class="ma-2" @click="changeSubscriptionPlan">Cambiar Plan de Suscripción</v-btn>
+              <v-btn color="#4ABDFD" class="ma-2" @click="changePassword">Cambiar Contraseña</v-btn>
+              <v-btn color="#4ABDFD" class="ma-2" @click="changeSubscriptionPlan">Editar Perfil</v-btn>
             </v-col>
           </v-row>
           <v-row justify="end">
-            <v-btn icon color="blue" @click="goBack">
+            <v-btn icon color="#4ABDFD" @click="goBack">
               <v-icon>mdi-arrow-left</v-icon>
             </v-btn>
           </v-row>

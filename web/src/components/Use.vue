@@ -1,4 +1,3 @@
-User
 <template>
   <v-container>
     <div class="my-10">
@@ -13,10 +12,11 @@ User
       </v-col>
       <!-- Botón Principal -->
       <v-col cols="12" md="4" lg="3" class="d-flex justify-center order-0 order-lg-1">
-        <div style="display: flex; justify-content: center">
+        <div style="display: flex; flex-direction: column; align-items: center;">
           <button class="primary-button" @click="redirectToAnalisis">
             <img src="../../public/logo1.png" alt="SerenityAPP" style="width: 33vh"/>
           </button>
+          <h2 class="subtitulo text-center">Toca para analizar</h2>
         </div>
       </v-col>
       <!-- Historial de Servicios -->
@@ -28,7 +28,6 @@ User
     </v-row>
   </v-container>
 </template>
-
 
 <script>
 export default {
@@ -46,13 +45,13 @@ export default {
       this.$router.push("/historial");
     },
     redirectToConectar() {
-    this.$router.push({
-      name: 'LoadingView',
-      state: {
-        message: 'Detectando dispositivos cercanos...',
-        redirectTo: 'Conectar'
-      }
-    });
+      this.$router.push({
+        name: 'LoadingView',
+        state: {
+          message: 'Detectando dispositivos cercanos...',
+          redirectTo: 'Conectar'
+        }
+      });
     },
   },
 };
@@ -63,6 +62,14 @@ export default {
   font-family: "KatahdinRound";
   src: local("KatahdinRound"),
     url("../assets/fonts/KatahdinRound.otf") format("opentype");
+}
+
+.subtitulo {
+  font-family: "KatahdinRound", fantasy;
+  font-size: 22px;
+  font-weight: normal;
+  color: #2a2a2a;
+  margin-top: 20px;
 }
 
 .btn-transparent {

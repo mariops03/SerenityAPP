@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center" align="center" class="mt-4">
-      <v-col cols="11" md="12" lg="8" xl="4" class="justify-center">
+      <v-col cols="11" md="12" lg="8" xl="5" class="justify-center">
         <div class="navbar">
           <div class="d-flex" style="margin-right: 20%">
             <a class="navbar-item" @click="navigateTo('inicio')">
@@ -86,8 +86,10 @@ export default {
   font-size: 1.8rem;
   font-family: 'Questrial', sans-serif;
   font-weight: 500;
-  
+  text-align: center;
+  line-height: 1; /* Ajusta este valor según sea necesario */
 }
+
 
 .navbar-menu {
   display: flex;

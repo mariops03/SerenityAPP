@@ -46,14 +46,14 @@
 
         <!-- Features Section -->
         <div class="section">
-          <h2 class="section-title">Características Principales</h2>
-          <ul style="list-style-type: none">
-            <li>Vibraciones innovadoras para aliviar el dolor</li>
-            <li>Sonidos relajantes y melodías suaves</li>
-            <li>Fácil de usar y completamente portátil</li>
-            <li>Desarrollada con expertos en bienestar</li>
-            <li>Compatible con dispositivos móviles</li>
-          </ul>
+            <h2 class="section-title">Características Principales</h2>
+            <ul style="list-style-type: none">
+            <li style="font-size: 1.2em">Vibraciones innovadoras para aliviar el dolor</li>
+            <li style="font-size: 1.2em">Sonidos relajantes y melodías suaves</li>
+            <li style="font-size: 1.2em">Fácil de usar y completamente portátil</li>
+            <li style="font-size: 1.2em">Desarrollada con expertos en bienestar</li>
+            <li style="font-size: 1.2em">Compatible con dispositivos móviles</li>
+            </ul>
         </div>
 
         <!-- Statistics Section -->

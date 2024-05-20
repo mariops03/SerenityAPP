@@ -6,39 +6,38 @@
       </v-col>
     </v-row>
 
-    <!-- Tarjeta de Resultados del Alivio y Feedback del Usuario -->
-    <v-row class="justify-center">
-      <v-col cols="12" md="6">
-        <v-card class="custom-card" style="height: 100%">
-          <v-card-text>
-            <p>Alivio conseguido: {{ resultado.alivioConseguido }}%</p>
-            <p>{{ resultado.comentarioAlivio }}</p>
-            <v-progress-circular
-              size="100"
-              width="15"
-              :model-value="resultado.alivioConseguido"
-              :color="getColor(resultado.alivioConseguido)"
-              class="mt-4 mb-4"
-              ><b style="color: black"
-                >{{ resultado.alivioConseguido }}%</b
-              ></v-progress-circular
+  <!-- Tarjeta de Resultados del Alivio y Feedback del Usuario -->
+  <v-row class="justify-center">
+    <v-col cols="12" md="6">
+      <v-card class="custom-card" style="height: 100%">
+        <v-card-text>
+          <p>Alivio conseguido: {{ resultado.alivioConseguido }}%</p>
+          <p>{{ resultado.comentarioAlivio }}</p>
+          <v-progress-circular
+            size="100"
+            width="15"
+            :model-value="resultado.alivioConseguido"
+            :color="getColor(resultado.alivioConseguido)"
+            class="mt-4 mb-4"
+          >
+            <b style="color: black">{{ resultado.alivioConseguido }}%</b>
+          </v-progress-circular>
+          <p class="mt-5">Por favor, indique como ha ido su tratamiento</p>
+          <div class="feedback-buttons mt-4">
+            <v-btn
+              v-for="n in 5"
+              :key="n"
+              :color="getButtonColor(n)"
+              class="ma-2 feedback-button"
+              @click="enviarFeedback(n)"
             >
-            <p class="mt-5">Por favor, indique como ha ido su tratamiento</p>
-            <div class="feedback-buttons mt-4">
-              <v-btn
-                v-for="n in 5"
-                :key="n"
-                :color="getButtonColor(n)"
-                class="ma-2"
-                @click="enviarFeedback(n)"
-              >
-                {{ n }}
-              </v-btn>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+              {{ n }}
+            </v-btn>
+          </div>
+        </v-card-text>
+      </v-card>
+    </v-col>
+  </v-row>
 
     <!-- MODAL DE FEEDBACK ENVIADO -->
     <v-dialog v-model="dialog" max-width="290">
@@ -120,6 +119,19 @@ export default {
   padding: 30px;
 }
 
+.feedback-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feedback-button {
+  flex: 1 1 auto;
+  min-width: 50px;
+  max-width: 100px;
+  text-align: center;
+}
+
 .v-card-text {
   display: flex;
   flex-direction: column;
@@ -132,11 +144,6 @@ export default {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
-}
-
-.feedback-buttons {
-  display: flex;
-  justify-content: center;
 }
 
 .v-btn {
