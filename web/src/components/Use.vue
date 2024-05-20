@@ -16,7 +16,7 @@
           <button class="primary-button" @click="redirectToAnalisis">
             <img src="../../public/logo1.png" alt="SerenityAPP" style="width: 33vh"/>
           </button>
-          <h2 class="subtitulo text-center">Toca para analizar</h2>
+          <h2 class="subtitulo text-center">Pulsa para aliviar</h2>
         </div>
       </v-col>
       <!-- Historial de Servicios -->
