@@ -12,7 +12,7 @@
             </a>
           </div>
           <div class="navbar-brand">
-            Serenity
+            Serenity App
           </div>
           <div class="d-flex" style="margin-left: 20%">
             <a class="navbar-item" @click="navigateTo('contacto')">

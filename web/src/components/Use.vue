@@ -2,7 +2,7 @@ User
 <template>
   <v-container>
     <div class="my-10">
-      <h1 class="titulo text-center">Bienvenido</h1>
+      <h1 class="titulo text-center">Bienvenido, Jorge</h1>
     </div>
     <v-row style="height: 40vh" align="center" justify="center">
       <!-- Historial de Análisis -->
