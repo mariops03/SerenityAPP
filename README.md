@@ -1,8 +1,10 @@
 # Serenity APP
 
-Wellness web app that relieves headaches through calibrated vibration therapy and relaxing ambient sounds. Born from real user research — interviews with students, teachers, and workers revealed that headaches from stress and fatigue were a universal pain point with no convenient non-pharmaceutical solution.
+Concept web application designed to relieve headaches through vibration therapy and relaxing ambient sounds. Built as a university project for the **Interaccion Persona-Ordenador (IPO)** course, focusing on the full HCI design cycle — from needfinding interviews to user testing and iterative redesign.
 
-The app uses the device's vibration motor to apply therapeutic patterns based on the [Gate Control Theory of Pain](https://en.wikipedia.org/wiki/Gate_control_theory), while ambient melodies create a calming environment for recovery.
+> **Note:** This is a prototype/concept application. The core functionality (pain analysis via wave detection, AI-calibrated vibration patterns) is simulated to demonstrate the UX flow and interface design. The real deliverable is the design process itself: user research, heuristic evaluations, and 3 iterative versions refined through real user feedback.
+
+The concept is based on the [Gate Control Theory of Pain](https://en.wikipedia.org/wiki/Gate_control_theory) (Melzack & Wall), which suggests that low-intensity mechanical stimuli can activate inhibitory interneurons that reduce pain perception. The app would use the device's vibration motor to apply therapeutic patterns while ambient melodies create a calming environment.
 
 <div align="center">
   <img src="assets/cover.png" alt="Serenity APP" width="550" />
@@ -13,8 +15,8 @@ The app uses the device's vibration motor to apply therapeutic patterns based on
 The core flow is designed to be as simple as possible — inspired by [Shazam](https://www.shazam.com/)'s one-tap interaction. A user with a headache shouldn't have to navigate complex menus.
 
 1. **Tap the logo** to start a pain analysis session
-2. The app detects the type and intensity of the headache using guided input
-3. AI-generated vibration patterns are calibrated to your specific pain profile
+2. The app analyzes the type and intensity of the headache (simulated)
+3. Vibration patterns are generated based on the analysis results (simulated)
 4. Place the device on the affected area and let the vibrations + audio work together
 5. Rate your experience (1-5) and the session is saved to your history
 
@@ -24,11 +26,11 @@ The core flow is designed to be as simple as possible — inspired by [Shazam](h
 
 ## Features
 
-- **Pain analysis** — Guided assessment to identify headache type, location, and intensity before generating a personalized vibration pattern
-- **Vibration therapy** — Patterns based on the Gate Control Theory of Pain (Melzack & Wall), designed to relax muscle tension and improve blood circulation
+- **Pain analysis** — Guided assessment to identify headache type, location, and intensity, generating a personalized report with stress levels and sleep data (simulated)
+- **Vibration therapy** — Concept based on the Gate Control Theory of Pain (Melzack & Wall), the app would use the device's motor to relax muscle tension and improve blood circulation (simulated)
 - **Relaxing audio** — Ambient melodies during sessions to complement the physical relief and reduce cortisol levels
 - **Session history** — Track all your analyses and relief sessions over time with detailed results
-- **Serenity Band** — Bluetooth-compatible headband accessory that wraps vibrations around the full head for 3x more effective relief than phone-only sessions
+- **Serenity Band** — Designed concept for a Bluetooth headband accessory that wraps vibrations around the full head, with a marketplace model (free app + paid accessory)
 - **User accounts** — Register, login, edit profile, and change password with JWT authentication
 - **Quick feedback** — 1-5 rating system after each session (replaced text feedback based on user testing)
 - **100% responsive** — Custom wave-themed SVG backgrounds adapted for desktop, tablet, and mobile
@@ -127,5 +129,3 @@ cd web && npm install && npm run dev
 ## Context
 
 Built for the **Interaccion Persona-Ordenador (IPO)** course at Universidad de Salamanca, 2024. The project went through a complete HCI cycle: needfinding interviews, elevator pitch, conceptualization, 2 heuristic evaluations, 2 user tests, and 3 iterative versions.
-
-Team: Daniel Mulas, Tomas Perez, and Mario Prieta.
